@@ -3,306 +3,178 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistente de Ensayo: Equidad en Salud</title>
+    <title>Asistente de Redacción Científica (Introducción) – Universidad Nacional de Colombia</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 800px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 80vh;
-        }
-
-        header {
-            background: #28a745;
-            /* Green for "Health/Growth" theme or distinct from previous blue */
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-
-        #chat-history {
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .message {
-            margin-bottom: 15px;
-            max-width: 80%;
-            padding: 10px 15px;
-            border-radius: 15px;
-            line-height: 1.4;
-        }
-
-        .user-message {
-            background: #28a745;
-            color: white;
-            align-self: flex-end;
-            margin-left: auto;
-            border-bottom-right-radius: 2px;
-        }
-
-        .ai-message {
-            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            max-width: 900px;
             color: #333;
-            align-self: flex-start;
-            margin-right: auto;
-            border-bottom-left-radius: 2px;
         }
 
-        #controls {
-            padding: 20px;
-            background: #fff;
+        h1 {
+            color: #28a745;
         }
 
-        #api-key-container {
-            margin-bottom: 10px;
-            padding: 10px;
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            border-radius: 5px;
-            font-size: 0.9em;
+        p {
+            line-height: 1.6;
         }
 
-        input[type="text"],
-        input[type="password"] {
+        textarea {
             width: 100%;
+            border: 1px solid #ccc;
             padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-            margin-bottom: 10px;
+            font-family: inherit;
+            border-radius: 4px;
         }
 
         button {
-            background: #28a745;
+            margin-top: 15px;
+            background-color: #28a745;
             color: white;
+            padding: 12px 24px;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 4px;
+            font-size: 16px;
             cursor: pointer;
-            font-weight: bold;
+            transition: background-color 0.3s;
         }
 
         button:hover {
-            background: #218838;
+            background-color: #218838;
         }
 
-        button:disabled {
-            background: #ccc;
+        hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #eee;
         }
 
-        .hidden {
-            display: none;
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Asistente de Escritura: Ensayo sobre Equidad en Salud</h1>
-        </header>
+    <h1>Coach de Redacción: Introducción Científica</h1>
 
-        <div id="chat-history">
-            <div class="message ai-message">
-                Hola, soy tu Mentor de Escritura. Te guiaré paso a paso para construir tu ensayo sobre Inequidad en
-                Salud,
-                siguiendo estrictamente la metodología del curso. Para empezar, por favor ingresa tu API Key de OpenAI
-                abajo.
-            </div>
-        </div>
-
-        <div id="controls">
-            <div id="api-key-container">
-                <p><strong>Configuración:</strong> Ingresa tu clave de OpenAI para activar el asistente.</p>
-                <label for="api-key">OpenAI API Key:</label>
-                <input type="password" id="api-key" placeholder="sk-...">
-            </div>
-            <div style="display: flex; gap: 10px;">
-                <input type="text" id="user-input" placeholder="Escribe aquí tu respuesta o duda..." disabled>
-                <button id="send-btn" disabled>Enviar</button>
-            </div>
-        </div>
-        <footer
-            style="text-align: center; padding: 10px; font-size: 0.8em; color: #666; border-top: 1px solid #ddd; background: #fafafa;">
-            Creado en la Facultad de Medicina, Universidad Nacional de Colombia
-        </footer>
+    <div class="highlight-box">
+        <p><strong>Objetivo:</strong> Este asistente utiliza Inteligencia Artificial para actuar como un <strong>Coach
+                de Escritura Científica</strong>. Te guiará paso a paso para escribir una introducción de 600-650
+            palabras que incluya:</p>
+        <ol>
+            <li>Antecedentes e importancia.</li>
+            <li>Estado del arte y resumen del conocimiento.</li>
+            <li>Vacío de conocimiento (Gap).</li>
+            <li>Objetivo del estudio.</li>
+        </ol>
     </div>
 
+    <p>
+        <strong>Instrucciones:</strong>
+        <br>1. Escribe el <strong>Tema de Investigación</strong> y el <strong>Título Provisional</strong> en el recuadro
+        de abajo.
+        <br>2. Haz clic en "Iniciar Redacción con IA".
+        <br>3. Se abrirá ChatGPT con el rol de coach activado. <strong>Sigue sus instrucciones paso a paso.</strong>
+
+        </div>
+	
+        <footer
+	
+            style="text-align: center; padding: 10px; font-size: 0.8em; color: #666; border-top: 1px solid #ddd; background: #fafafa;">
+	
+            Creado en la Facultad de Medicina, Universidad Nacional de Colombia
+	
+        </footer>
+	
+    </div>
+        
+    </p>
+
+    <hr>
+
     <script>
+        /* ==========================
+           PROMPT DE INTRODUCCION
+           ========================== */
         const SYSTEM_PROMPT = `
-# System Prompt: Asistente para Ensayo de Equidad en Salud
+Eres un **Coach de Escritura Científica** experto y estricto. Tu objetivo es guiar al estudiante para que escriba la **Sección de Introducción** de su artículo científico, siguiendo estrictamente los criterios del profesor Javier Eslava Schmalbach.
 
-Eres un **Mentor de Escritura Académica especializado en Salud Pública y Equidad**. Tu objetivo es guiar a estudiantes (de maestría o pregrado) para escribir un ensayo argumentativo riguroso sobre **Inequidad en Salud** o **Determinantes Sociales de la Salud**.
+## Criteria de Evaluación ("La Tarea")
+El estudiante debe producir un texto de **600 a 650 palabras** que incluya, en orden:
+1.  **Antecedentes**: Importancia del tema.
+2.  **Estado del Arte**: Lo que se sabe (causas, efectos, asociaciones).
+3.  **Resumen del conocimiento**: Breve síntesis de lo conocido.
+4.  **Vacío de Conocimiento (Gap)**: Lo que NO se sabe (la justificación de este estudio).
+5.  **Objetivo**: El propósito del estudio actual.
 
-## Metodología del Ensayo (TIPS)
-Debes asegurar que el estudiante cumpla estrictamente con los siguientes requisitos:
-1.  **Tema**: Inequidad en salud, equidad en salud, determinantes sociales/comerciales, justicia social, acceso, cobertura, etc.
-2.  **Estructura**:
-    - **Título**: Centrado en la pregunta o idea primaria.
-    - **Autoría**: Nombre del estudiante debajo del título.
-    - **Introducción**: Contexto general + **Pregunta/Cuestionamiento explícito**.
-    - **Desarrollo**: Apreciación crítica contrastando autores a favor y en contra.
-    - **Conclusión**: Respuesta clara a la pregunta planteada (confirmando o rebatiendo).
-3.  **Formato**:
-    - Longitud: **600 a 650 palabras** (contenido, sin referencias).
-    - Referencias: Estilo **VANCOUVER**, gestionadas con **Mendeley** o **Zotero**.
+## Reglas de Forma (A verificar constantemente)
+-   **Tono**: Académico, impersonal (nunca escribir "como se habla").
+-   **Puntuación**: Uso correcto de puntos seguidos para pausar ideas. Evitar el exceso de comas ("coma respiratoria").
+-   **Citación (AUDITORÍA)**:
+    -   La IA no puede "ver" el plugin de Mendeley. Por tanto, **debes preguntar**: *"¿Insertaste esta cita (e.g. [1]) usando el plugin de Word de Mendeley/Zotero? Confírmalo."*
+    -   **Verificación de Fuente**: Para cada afirmación "científica", pide la fuente. *"Dices que la prevalencia es del 5%. ¿Qué artículo dice eso? Dame el Título o DOI."*
+-   **Plagio / IA**:
+    -   Si el texto es sospechoso, **pide la fuente original**. *"Ese párrafo suena muy perfecto. Cárgame la frase original del paper que estás citando para comparar."* (Esto obliga al estudiante a mostrar que leyó la fuente real).
 
-## Flujo de Trabajo (Paso a Paso)
-Guía al estudiante secuencialmente. No pases al siguiente paso hasta que el actual esté sólido.
+## Guía de Interacción (Socrática Estricta)
+1.  **NO escribas el texto por el estudiante**.
+2.  **AUDITORÍA DE FUENTES**: No aceptes afirmaciones sin respaldo. Si el estudiante escribe *"La diabetes crece rápido..."*, pregunta: *"¿Según quién? ¿Qué autor dice eso? Cita la fuente."*
+3.  **Paso a Paso**: Trabaja una sección a la vez (1 a 5).
+3.  **Ciclo de Corrección**:
+    *   **Pide**: "Escribe el primer párrafo sobre los Antecedentes (Importancia)."
+    *   **Evalúa**: Revisa tono, puntuación y claridad.
+    *   **Feedback**: "Tu idea es buena, pero usas muchas comas y lenguaje coloquial. Intenta reescribirlo siendo más formal y usando puntos seguidos." -> *Espera la corrección*.
+    *   **Aprobación**: Solo cuando esté bien, pasa al siguiente punto.
 
-### Fase 1: Definición de la Pregunta
-- Pregunta al estudiante qué tema le interesa.
-- Ayúdalo a formular una **Pregunta de Investigación** o un cuestionamiento central.
-- *Criterio*: La pregunta debe ser debatible, no un simple dato.
-
-### Fase 2: Argumentos y Autores
-- Pide al estudiante que liste los autores o fuentes que ha consultado.
-- Indaga: "¿Qué autores apoyan tu hipótesis y cuáles la contradicen?".
-- *Nota*: El ensayo requiere una apreciación crítica basada en esta contrastación.
-
-### Fase 3: Escritura - Introducción
-- Pídeles que redacten el primer párrafo.
-- Revisa que incluya: Contexto general + La Pregunta explícita.
-
-### Fase 4: Escritura - Desarrollo
-- Pídeles que desarrollen la discusión crítica.
-- Verifica que usen citas (ej. [1], [2]).
-- Recuérdales usar su gestor de referencias (Mendeley/Zotero) para insertar las citas.
-
-### Fase 5: Escritura - Conclusión
-- Pídeles la conclusión.
-- *Verificación*: ¿Responde directamente a la pregunta de la Fase 1?
-
-### Fase 6: Revisión Final
-- Pide al estudiante que revise el conteo de palabras (debe ser 600-650).
-- Verifica título y nombre.
-- Recuérdales generar la bibliografía con su gestor en formato Vancouver.
-
-## Reglas de Interacción
-1.  **Un paso a la vez**: No abrumes con todas las instrucciones juntas.
-2.  **Sé constructivo pero riguroso**: Si la pregunta es vaga, pide precisarla. Si el texto es muy corto o largo, adviértelo.
-3.  **Gestión de Referencias**: No puedes "ver" su base de datos de Mendeley, pero sí puedes recordarles que *deben* usarlo y verificar que en el texto aparezcan las llamadas a cita (números entre paréntesis o corchetes según Vancouver).
-4.  **Tono**: Académico, motivador y formal.
-
-INSTRUCCIÓN INICIAL: Saluda, preséntate como su asistente para el ensayo de Equidad en Salud, y pregúntales sobre qué tema específico quieren trabajar hoy.
+## Instrucción Inicial
+Presentate como el Asistente de Redacción para la Introducción. Pregunta cuál es el tema de investigación y el título provisional (si el usuario ya lo proporcionó, úsalo para comenzar).
 `;
 
-        const chatHistory = document.getElementById('chat-history');
-        const userInput = document.getElementById('user-input');
-        const sendBtn = document.getElementById('send-btn');
-        const apiKeyInput = document.getElementById('api-key');
+        function startSession() {
+            const topic = document.getElementById("topic").value.trim();
 
-        let messages = [
-            { role: "system", content: SYSTEM_PROMPT }
-        ];
-
-        function appendMessage(role, text) {
-            const div = document.createElement('div');
-            div.className = `message ${role === 'user' ? 'user-message' : 'ai-message'}`;
-            // Convert simple newlines to <br> for better display
-            div.innerHTML = text.replace(/\\n/g, '<br>');
-            chatHistory.appendChild(div);
-            chatHistory.scrollTop = chatHistory.scrollHeight;
-        }
-
-        async function callOpenAI(userText) {
-            const apiKey = apiKeyInput.value.trim();
-            if (!apiKey) {
-                alert("Por favor ingresa una API Key válida.");
+            if (!topic) {
+                alert("Por favor, escribe el tema y título provisional para comenzar.");
                 return;
             }
 
-            // Disable UI
-            userInput.disabled = true;
-            sendBtn.disabled = true;
+            // Construir el prompt final
+            const fullPrompt = `${SYSTEM_PROMPT}\n\n[CONTEXTO DEL ESTUDIANTE]\nEl estudiante va a escribir sobre: "${topic}".\n\nPor favor inicia la sesión siguiendo las Instrucciones Iniciales.`;
 
-            // Add user message to local history
-            messages.push({ role: "user", content: userText });
-            appendMessage('user', userText);
-
-            try {
-                const response = await fetch('https://api.openai.com/v1/chat/completions', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`
-                    },
-                    body: JSON.stringify({
-                        model: "gpt-4o", // Upgraded to 4o for better reasoning on writing tasks
-                        messages: messages,
-                        temperature: 0.7
-                    })
-                });
-
-                if (!response.ok) {
-                    const err = await response.json();
-                    throw new Error(err.error?.message || 'Error en la API');
-                }
-
-                const data = await response.json();
-                const aiText = data.choices[0].message.content;
-
-                messages.push({ role: "assistant", content: aiText });
-                appendMessage('assistant', aiText);
-
-            } catch (error) {
-                appendMessage('assistant', `Error: ${error.message}`);
-            } finally {
-                userInput.disabled = false;
-                sendBtn.disabled = false;
-                userInput.focus();
-            }
+            // Codificar y abrir ChatGPT
+            const url = "https://chat.openai.com/?prompt=" + encodeURIComponent(fullPrompt);
+            window.open(url, "_blank");
         }
-
-        function sendMessage() {
-            const text = userInput.value.trim();
-            if (text && !sendBtn.disabled) {
-                userInput.value = '';
-                callOpenAI(text);
-            }
-        }
-
-        sendBtn.addEventListener('click', sendMessage);
-
-        userInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                sendMessage();
-            }
-        });
-
-        // Enable chat if key is present (basic check)
-        apiKeyInput.addEventListener('input', () => {
-            const hasKey = apiKeyInput.value.trim().length > 10;
-            userInput.disabled = !hasKey;
-            sendBtn.disabled = !hasKey;
-        });
     </script>
+
+    <!-- ==========================
+         INTERFAZ
+         ========================== -->
+    <h2>1. ¿Cuál es tu Tema y Título Provisional?</h2>
+
+    <textarea id="topic" rows="4"
+        placeholder="Ejemplo: Título: Efecto de la dieta mediterránea en... Tema: Prevención cardiovascular..."></textarea>
+
+    <button onclick="startSession()">
+        Iniciar Redacción con IA (ChatGPT)
+    </button>
+
+    <hr>
+
+    <p style="font-size: 0.9em; color: #666;">
+        <em>Este asistente te redirigirá a ChatGPT con las instrucciones precargadas. Asegúrate de haber iniciado sesión
+            en OpenAI.</em>
+    </p>
+
+    <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 20px;">
+        <em>Creado en la Facultad de Medicina, Universidad Nacional de Colombia</em>
+    </p>
 
 </body>
 
